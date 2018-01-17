@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<!-- <input type="text" placeholder="First Name" [(ngModel)]="first" #ctl="ngModel">
+  
+<input type="text" placeholder="last Name" [(ngModel)]="last" #ctl="ngModel">
+  
+  <button ion-button block (click)="callgetService(first, last)">get http</button>
+  <button ion-button block (click)="callpostService(first, last)">post http</button>
+  <ion-item>
+    <ion-label color="primary" floating>Enter a description</ion-label>
+    <ion-textarea row="10" [(ngModel)]="area" #ctl="ngModel"></ion-textarea>
+  </ion-item> -->
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'FIRST NAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="fname"></ion-input>
+      </ion-item>
+ <ion-item>
+        <ion-label fixed>{{ 'LAST NAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="lname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <!--
+      Want to add a Username? Here you go:
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+      -->
+
+      <ion-item>
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'LOCATION' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.location" name="location"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
