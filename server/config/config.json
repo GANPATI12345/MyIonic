@@ -1,0 +1,32 @@
+{
+    "name": "futurestudio-homepage",
+    "script": "./server.js",
+    "exec_mode": "cluster",
+    "instances": 1,
+    "development": {
+        "http_host": "localhost",
+        "http_port": 8080,
+        "download_host": "localhost",
+        "download_port": 7652,
+        "mongoDB": {
+            "host": "localhost",
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "db": "bucket"
+        }
+    },
+    "production": {
+        "http_host": "localhost",
+        "http_port": 9000,
+        "download_host": "localhost",
+        "download_port": 7652,
+        "mongoDB": {
+            "host": "localhost",
+            "port": 27017,
+            "user": "test",
+            "password": "test",
+            "db": "bucket"
+        }
+    }
+}
